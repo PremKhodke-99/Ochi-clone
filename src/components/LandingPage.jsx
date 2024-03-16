@@ -11,16 +11,16 @@ function LandingPage() {
                             <div className="masker" key={index}>
                                 <div className="w-fit flex items-center">
                                     {
-                                        index === 1 && (<div className='mr-[0.5vw] rounded-md w-[8vw] h-[5vw] relative top-[0.5vw] bg-red-300'></div>)
+                                        index === 1 && (<img src='https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg' className='mr-[0.5vw] rounded-md w-[8vw] h-[5vw] relative top-[0.5vw]' />)
                                     }
-                                <h1 className='flex items-center uppercase text-[7.5vw] leading-[6vw] tracking-tighter font-["Founders Grotesk"] font-medium'>{item}</h1>
+                                <h1 className='flex items-center uppercase text-[7.5vw] leading-[7vw] tracking-tighter font-bold'>{item}</h1>
                                 </div>
                             </div>)
                     })
                 }
 
             </div>
-            <div className="border-t-[1px] border-zinc-800 mt-32 flex justify-between items-center py-5 px-20">
+            <div className="border-t-[1px] border-zinc-800 mt-20 flex justify-between items-center py-5 px-20">
                 {
                     ["For public and private companies", "From the first pitch to IPO"].map((item, index) =>
                         <p className='text-md font-light tracking-tight leading-none'>{item}</p>
