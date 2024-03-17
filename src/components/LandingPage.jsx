@@ -1,9 +1,10 @@
+import { motion } from 'framer-motion';
 import React from 'react'
 import { FaArrowUpLong } from "react-icons/fa6";
 
 function LandingPage() {
     return (
-        <div className='w-full h-screen bg-zinc-900 pt-1'>
+        <div data-scroll data-scroll-speed="-0.3" className='w-full h-screen bg-zinc-900 pt-1'>
             <div className="textstructure mt-52 px-20">
                 {
                     ["We Create", "Eye-Opening", "Presentations"].map((item, index) => {
@@ -11,9 +12,19 @@ function LandingPage() {
                             <div className="masker" key={index}>
                                 <div className="w-fit flex items-center">
                                     {
-                                        index === 1 && (<img src='https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg' className='mr-[0.5vw] rounded-md w-[8vw] h-[5vw] relative top-[0.5vw]' />)
+                                        index === 1 && (
+                                            <motion.div 
+                                            initial={{width: 0}} 
+                                            animate={{width: "9vw"}} 
+                                            transition={{ease: [0.76, 0, 0.24, 1], duration: 1}}
+                                            
+                                            className='flex items-center justify-center'>
+                                                <img src='https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg'
+                                                    className='mr-[0.5vw] rounded-md w-[9vw] h-[6vw]' />
+                                            </motion.div>
+                                        )
                                     }
-                                <h1 className='flex items-center uppercase text-[7.5vw] leading-[7vw] tracking-tighter font-bold'>{item}</h1>
+                                    <h1 className='flex items-center uppercase text-[7.5vw] leading-[7vw] tracking-tighter font-bold'>{item}</h1>
                                 </div>
                             </div>)
                     })
